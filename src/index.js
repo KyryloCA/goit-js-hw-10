@@ -53,8 +53,8 @@ function displayCountry(response) {
   const [oneCountry] = response;
   console.log(oneCountry);
   let languagesString = '';
-  for (lang in oneCountry.languages) {
-    languagesString += `<span>${oneCountry.languages[lang]}</span>,`;
+  for (key in oneCountry.languages) {
+    languagesString += `<span>${oneCountry.languages[key]}</span>,`;
   }
   languagesString = languagesString.slice(0, -1);
   const markUp = `<p class="countrytitle"><img class="flag" src="${oneCountry.flags.svg}" alt="${oneCountry.name.official}">${oneCountry.name.official}</p>
