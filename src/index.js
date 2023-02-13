@@ -53,7 +53,7 @@ function displayCountry(response) {
   const [oneCountry] = response;
   console.log(oneCountry);
   let languagesString = '';
-  for (key in oneCountry.languages) {
+  for (let key in oneCountry.languages) {
     languagesString += `<span>${oneCountry.languages[key]}</span>,`;
   }
   languagesString = languagesString.slice(0, -1);
