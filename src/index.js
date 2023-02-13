@@ -51,6 +51,7 @@ function displayCountry(response) {
   countryList.innerHTML = '';
   countryInfo.innerHTML = '';
   const [oneCountry] = response;
+  console.log(oneCountry);
   let languagesString = '';
   for (lang in oneCountry.languages) {
     languagesString += `<span>${oneCountry.languages[lang]}</span>,`;
